@@ -1,0 +1,11 @@
+#+begin_src bash
+pip install wheel
+#+end_src
+
+* Make setup.py
+  see templates/setup.py
+
+* Clear history
+  rm -rf *.egg-info/* dist/*
+
+python setup.py sdist bdist_wheel

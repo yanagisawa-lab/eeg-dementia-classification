@@ -1,0 +1,471 @@
+
+Random seeds have been fixed as 42
+
+
+ACC in fold#0 was 0.978
+
+
+Balanced ACC in fold#0 was 0.978
+
+
+MCC in fold#0 was 0.975
+
+
+Confusion Matrix in fold#0: 
+
+    0   1   2   3   4   5   6   7   8   9
+0  36   0   0   0   0   0   0   0   0   0
+1   0  36   0   0   0   0   0   0   0   0
+2   0   0  36   0   0   0   0   0   0   0
+3   0   0   0  33   0   1   0   0   2   0
+4   0   0   0   0  36   0   0   0   1   0
+5   0   0   0   0   0  35   0   0   0   1
+6   0   0   0   0   1   0  35   0   0   0
+7   0   0   0   0   0   0   0  36   0   0
+8   0   2   0   0   0   0   0   0  33   0
+9   0   0   0   0   0   0   0   0   0  36
+
+
+Classification Report for fold#0:
+
+                0       1     2       3  ...       9  balanced accuracy  macro avg  weighted avg
+precision     1.0   0.947   1.0   1.000  ...   0.973              0.978      0.978         0.978
+recall        1.0   1.000   1.0   0.917  ...   1.000              0.978      0.978         0.978
+f1-score      1.0   0.973   1.0   0.957  ...   0.986              0.978      0.978         0.978
+sample size  36.0  36.000  36.0  36.000  ...  36.000              0.978    360.000       360.000
+
+[4 rows x 13 columns]
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(7.0, 7.0) [cm]', 'font.size': 7, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+ACC in fold#1 was 0.981
+
+
+Balanced ACC in fold#1 was 0.981
+
+
+MCC in fold#1 was 0.978
+
+
+Confusion Matrix in fold#1: 
+
+    0   1   2   3   4   5   6   7   8   9
+0  36   0   0   0   0   0   0   0   0   0
+1   0  35   0   0   0   0   1   0   0   0
+2   0   0  36   0   0   0   0   0   0   0
+3   0   0   0  35   0   0   0   1   0   0
+4   0   0   0   0  33   0   1   1   0   1
+5   0   0   0   0   0  36   1   0   0   0
+6   0   0   0   0   0   1  35   0   0   0
+7   0   0   0   0   0   0   0  36   0   0
+8   0   0   0   0   0   0   0   0  35   0
+9   0   0   0   0   0   0   0   0   0  36
+
+
+Classification Report for fold#1:
+
+                0       1     2       3  ...       9  balanced accuracy  macro avg  weighted avg
+precision     1.0   1.000   1.0   1.000  ...   0.973              0.981      0.981         0.981
+recall        1.0   0.972   1.0   0.972  ...   1.000              0.981      0.981         0.981
+f1-score      1.0   0.986   1.0   0.986  ...   0.986              0.981      0.981         0.981
+sample size  36.0  36.000  36.0  36.000  ...  36.000              0.981    360.000       360.000
+
+[4 rows x 13 columns]
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(7.0, 7.0) [cm]', 'font.size': 7, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+ACC in fold#2 was 0.989
+
+
+Balanced ACC in fold#2 was 0.989
+
+
+MCC in fold#2 was 0.988
+
+
+Confusion Matrix in fold#2: 
+
+    0   1   2   3   4   5   6   7   8   9
+0  36   0   0   0   0   0   0   0   0   0
+1   0  36   0   0   0   0   0   0   0   0
+2   0   0  35   0   0   0   0   0   0   0
+3   0   0   0  37   0   0   0   0   0   0
+4   0   0   0   0  36   0   0   0   0   0
+5   0   0   0   0   1  35   0   0   0   1
+6   0   0   0   0   0   0  36   0   0   0
+7   0   0   0   0   0   0   0  36   0   0
+8   0   0   0   0   0   0   0   0  33   1
+9   0   0   0   0   0   0   0   1   0  35
+
+
+Classification Report for fold#2:
+
+                0     1     2     3  ...       9  balanced accuracy  macro avg  weighted avg
+precision     1.0   1.0   1.0   1.0  ...   0.946              0.989      0.989         0.989
+recall        1.0   1.0   1.0   1.0  ...   0.972              0.989      0.989         0.989
+f1-score      1.0   1.0   1.0   1.0  ...   0.959              0.989      0.989         0.989
+sample size  36.0  36.0  35.0  37.0  ...  36.000              0.989    359.000       359.000
+
+[4 rows x 13 columns]
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(7.0, 7.0) [cm]', 'font.size': 7, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+ACC in fold#3 was 0.983
+
+
+Balanced ACC in fold#3 was 0.983
+
+
+MCC in fold#3 was 0.981
+
+
+Confusion Matrix in fold#3: 
+
+    0   1   2   3   4   5   6   7   8   9
+0  34   0   0   0   1   0   0   0   0   0
+1   0  37   0   0   0   0   0   0   0   0
+2   0   0  35   0   0   0   0   0   0   0
+3   0   0   0  37   0   0   0   0   0   0
+4   0   0   0   0  36   0   0   0   0   0
+5   0   0   0   0   0  35   0   0   0   1
+6   0   0   0   0   0   0  37   0   0   0
+7   0   0   0   0   0   0   0  35   0   0
+8   0   1   0   1   0   1   0   0  32   0
+9   0   0   0   0   0   1   0   0   0  35
+
+
+Classification Report for fold#3:
+
+                  0       1     2  ...  balanced accuracy  macro avg  weighted avg
+precision     1.000   0.974   1.0  ...              0.983      0.984         0.984
+recall        0.971   1.000   1.0  ...              0.983      0.983         0.983
+f1-score      0.986   0.987   1.0  ...              0.983      0.983         0.983
+sample size  35.000  37.000  35.0  ...              0.983    359.000       359.000
+
+[4 rows x 13 columns]
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(7.0, 7.0) [cm]', 'font.size': 7, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+ACC in fold#4 was 0.981
+
+
+Balanced ACC in fold#4 was 0.981
+
+
+MCC in fold#4 was 0.978
+
+
+Confusion Matrix in fold#4: 
+
+    0   1   2   3   4   5   6   7   8   9
+0  35   0   0   0   0   0   0   0   0   0
+1   0  37   0   0   0   0   0   0   0   0
+2   0   0  35   0   0   0   0   0   0   0
+3   0   0   0  36   0   1   0   0   0   0
+4   0   0   0   0  36   0   0   0   0   0
+5   0   0   0   0   0  36   0   0   0   0
+6   0   0   0   0   0   0  35   0   1   0
+7   0   0   0   0   0   0   0  35   0   1
+8   0   1   0   0   0   0   0   0  34   0
+9   0   0   0   0   0   1   0   0   2  33
+
+
+Classification Report for fold#4:
+
+                0       1     2       3  ...       9  balanced accuracy  macro avg  weighted avg
+precision     1.0   0.974   1.0   1.000  ...   0.971              0.981      0.981         0.981
+recall        1.0   1.000   1.0   0.973  ...   0.917              0.981      0.981         0.981
+f1-score      1.0   0.987   1.0   0.986  ...   0.943              0.981      0.981         0.981
+sample size  35.0  37.000  35.0  37.000  ...  36.000              0.981    359.000       359.000
+
+[4 rows x 13 columns]
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(7.0, 7.0) [cm]', 'font.size': 7, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+----------------------------------------
+
+
+manu_dfs
+
+
+5-fold-CV mean:
+
+       0      1      2
+0  0.740  0.307  0.509
+1  0.504  0.524  0.696
+2  0.594  0.507  0.682
+3  0.450  0.494  0.611
+4  0.480  0.412  0.409
+
+
+5-fold-CV std.:
+
+       0      1      2
+0  0.190  0.253  0.392
+1  0.395  0.360  0.200
+2  0.214  0.183  0.207
+3  0.191  0.199  0.398
+4  0.416  0.328  0.239
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 manu_scalars
+5-folds_CV_mean         0.643
+5-fold_CV_std           0.306
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                   mcc
+5-folds_CV_mean  0.980
+5-fold_CV_std    0.005
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 balanced_acc
+5-folds_CV_mean         0.982
+5-fold_CV_std           0.004
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+conf_mat
+
+
+5-fold-CV mean:
+
+      0     1     2     3     4     5     6     7     8     9
+0  35.4   0.0   0.0   0.0   0.2   0.0   0.0   0.0   0.0   0.0
+1   0.0  36.2   0.0   0.0   0.0   0.0   0.2   0.0   0.0   0.0
+2   0.0   0.0  35.4   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+3   0.0   0.0   0.0  35.6   0.0   0.4   0.0   0.2   0.4   0.0
+4   0.0   0.0   0.0   0.0  35.4   0.0   0.2   0.2   0.2   0.2
+5   0.0   0.0   0.0   0.0   0.2  35.4   0.2   0.0   0.0   0.6
+6   0.0   0.0   0.0   0.0   0.2   0.2  35.6   0.0   0.2   0.0
+7   0.0   0.0   0.0   0.0   0.0   0.0   0.0  35.6   0.0   0.2
+8   0.0   0.8   0.0   0.2   0.0   0.2   0.0   0.0  33.4   0.2
+9   0.0   0.0   0.0   0.0   0.0   0.4   0.0   0.2   0.4  35.0
+
+
+5-fold-CV std.:
+
+       0      1      2      3      4      5      6      7      8      9
+0  0.894  0.000  0.000  0.000  0.447  0.000  0.000  0.000  0.000  0.000
+1  0.000  0.837  0.000  0.000  0.000  0.000  0.447  0.000  0.000  0.000
+2  0.000  0.000  0.548  0.000  0.000  0.000  0.000  0.000  0.000  0.000
+3  0.000  0.000  0.000  1.673  0.000  0.548  0.000  0.447  0.894  0.000
+4  0.000  0.000  0.000  0.000  1.342  0.000  0.447  0.447  0.447  0.447
+5  0.000  0.000  0.000  0.000  0.447  0.548  0.447  0.000  0.000  0.548
+6  0.000  0.000  0.000  0.000  0.447  0.447  0.894  0.000  0.447  0.000
+7  0.000  0.000  0.000  0.000  0.000  0.000  0.000  0.548  0.000  0.447
+8  0.000  0.837  0.000  0.447  0.000  0.447  0.000  0.000  1.140  0.447
+9  0.000  0.000  0.000  0.000  0.000  0.548  0.000  0.447  0.894  1.225
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+clf_report
+
+
+5-fold-CV mean:
+
+                  0       1     2  ...  balanced accuracy  macro avg  weighted avg
+precision     1.000   0.979   1.0  ...              0.982      0.983         0.983
+recall        0.994   0.994   1.0  ...              0.982      0.982         0.982
+f1-score      0.997   0.987   1.0  ...              0.982      0.982         0.982
+sample size  35.600  36.400  35.4  ...              0.982    359.400       359.400
+
+[4 rows x 13 columns]
+
+
+5-fold-CV std.:
+
+                 0      1      2      3  ...      9  balanced accuracy  macro avg  weighted avg
+precision    0.000  0.022  0.000  0.012  ...  0.012              0.004      0.004         0.004
+recall       0.013  0.013  0.000  0.034  ...  0.034              0.004      0.004         0.004
+f1-score     0.006  0.010  0.000  0.016  ...  0.018              0.004      0.004         0.004
+sample size  0.548  0.548  0.548  0.548  ...  0.000              0.004      0.548         0.548
+
+[4 rows x 13 columns]
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 roc_auc_micro
+5-folds_CV_mean            1.0
+5-fold_CV_std              0.0
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 roc_auc_macro
+5-folds_CV_mean            1.0
+5-fold_CV_std              0.0
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 pre_rec_auc_micro
+5-folds_CV_mean              0.998
+5-fold_CV_std                0.001
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+                 pre_rec_auc_macro
+5-folds_CV_mean              0.998
+5-fold_CV_std                0.001
+
+
+----------------------------------------
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_figs/fold#0.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_figs/fold#1.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_figs/fold#2.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_figs/fold#3.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_figs/fold#4.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_dfs.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/manu_scalars.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/mcc.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/balanced_acc.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/clf_report.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_micro.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_macro.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_fig/fold#0.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_fig/fold#1.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_fig/fold#2.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_fig/fold#3.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/roc_auc_fig/fold#4.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_micro.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_macro.csv
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_fig/fold#0.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_fig/fold#1.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_fig/fold#2.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_fig/fold#3.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/pre_rec_auc_fig/fold#4.png
+
+
+Matplotilb has been configured as follows:
+{'figure.dpi': 100, 'savefig.dpi': 300, 'figure.figsize': '(8.0, 8.0) [cm]', 'font.size': 6, 'axes.labelsize': 8, 'xtick.labelsize': 8, 'ytick.labelsize': 8, 'axes.titlesize': 8, 'legend.fontsize': 6, 'pdf.fonttype': 42, 'ps.fonttype': 42, 'axes.spines.top': True, 'axes.spines.right': True, 'xtick.major.size': 2.032, 'ytick.major.size': 2.032, 'xtick.major.width': 0.508, 'ytick.major.width': 0.508}.
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/fold#0.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/fold#1.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/fold#2.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/fold#3.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/fold#4.png
+
+
+Saved to: mngs_repo/src/mngs/ml/ClassificationReporter/conf_mat_figs/k-fold_cv_overall-sum.png
+

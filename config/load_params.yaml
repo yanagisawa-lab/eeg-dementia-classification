@@ -1,0 +1,53 @@
+montage:
+  [
+  ["FP1", "A1"],
+  ["F3", "A1"],
+  ["C3", "A1"],
+  ["P3", "A1"],
+  ["O1", "A1"],
+  ["FP2", "A2"],
+  ["F4", "A2"],
+  ["C4", "A2"],
+  ["P4", "A2"],
+  ["O2", "A2"],
+  ["F7", "A1"],
+  ["T7", "A1"],
+  ["P7", "A1"],
+  ["F8", "A2"],
+  ["T8", "A2"],
+  ["P8", "A2"],
+  ["Fz", "A1"],
+  ["Cz", "A1"],
+  ["Pz", "A1"]
+  ]
+  
+trial_types:
+  ["NoiseFreeSection"]
+  
+apply_common-average:
+  False
+
+class_field_name:
+  "disease_type"
+  
+num_folds:
+  5
+  
+val_ratio_to_trn:
+  0.25
+  
+undersample_trn:
+  True
+
+undersample_val:
+  True
+
+# apply_bandpass_filter:
+#   low_freq:
+#     1
+#   high_freq:
+#     # 50
+#     99
+
+apply_notch_filter:
+  True

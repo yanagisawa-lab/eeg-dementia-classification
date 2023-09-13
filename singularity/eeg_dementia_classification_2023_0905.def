@@ -1,0 +1,173 @@
+Bootstrap: docker
+From: rockylinux/rockylinux:8.5
+# From: rockylinux/rockylinux
+
+
+%setup
+
+
+%post -c /bin/bash
+    ################################################################################
+    ## Directories to bind for the sandbox environment
+    ################################################################################
+    # mkdir /work /storage
+
+    ################################################################################
+    ## PATH
+    ################################################################################
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/lib:/usr/local/lib64
+    echo export LD_LIBRARY_PATH=$LD_LIBRARY_PATH >> $SINGULARITY_ENVIRONMENT
+
+    ################################################################################
+    ## Rocky Linux 8
+    ################################################################################    
+    dnf -y install setup
+    dnf -y groupinstall "Development Tools"
+    dnf -y upgrade
+
+    ##############################
+    ## dnf repos
+    ##############################
+    dnf -y install dnf-plugins-core
+
+    # POWER TOOLS
+    dnf config-manager --set-enabled powertools
+
+    # EPEL
+    dnf -y install epel-release    
+
+    # libffi-devel
+    dnf -y install libffi libffi-devel
+    ## upgrade
+    dnf -y upgrade
+
+
+    ##############################
+    ## Locale: en_US.UTF-8
+    ##############################
+    dnf -y install langpacks-en glibc-all-langpacks
+    localedef -i en_US -f UTF-8 en_US.UTF-8
+
+    export LC_ALL=en_US.UTF-8
+    echo export LC_ALL=$LC_ALL >> $SINGULARITY_ENVIRONMENT
+
+
+    ##############################
+    ## Misc
+    ##############################
+    dnf -y install mesa-libGL mesa-libGL-devel
+    dnf -y install glibc glibc-devel    
+    dnf -y install tree
+
+    ################################################################################
+    ## Python
+    ################################################################################
+    dnf -y install python39 python39-devel
+    ln -s /usr/bin/python3 /usr/bin/python # alias
+    dnf -y install python39-tkinter
+
+    ## pip
+    python3 -m pip install --upgrade pip setuptools wheel
+
+    ## Machine learning
+    python3 -m pip install scikit-learn
+    python3 -m pip install sklearn    
+    python3 -m pip install torch==1.12.1+cu102 \
+                           torchvision==0.13.1+cu102 \
+                           torchaudio==0.12.1 \
+                           --extra-index-url https://download.pytorch.org/whl/cu102
+    python3 -m pip install torch_summary
+
+    ## DSP
+    python3 -m pip install julius
+    python3 -m pip install mne
+
+    ## Statistics
+    python3 -m pip install pingouin
+    python3 -m pip install statsmodels
+    python3 -m pip install joypy
+    
+
+    ## Basics
+    python3 -m pip install readchar    
+    python3 -m pip install chardet
+    python3 -m pip install gitpython
+    python3 -m pip install h5py
+    python3 -m pip install hydra-core
+    python3 -m pip install "ipython<8.0.0"
+    python3 -m pip install jupyter    
+    python3 -m pip install matplotlib
+    python3 -m pip install natsort
+    python3 -m pip install numba
+    python3 -m pip install numpy
+    python3 -m pip install obspy # failed
+    python3 -m pip install omegaconf
+    python3 -m pip install pandas
+    python3 -m pip install psutil    
+    python3 -m pip install pybids
+    python3 -m pip install PyYAML
+    python3 -m pip install sympy    
+    python3 -m pip install tqdm
+    
+    ## Image
+    python3 -m pip install seaborn
+    # python3 -m pip install ipywidgets
+    # python3 -m pip install kaleido    
+
+    ## Linters
+    python3 -m pip install black
+    python3 -m pip install flake8
+
+    ## Debugger
+    python3 -m pip install ipdb
+
+    ## for Development
+    python3 -m pip install keyring
+    python3 -m pip install pytest
+    python3 -m pip install pytest-cov
+    python3 -m pip install rfc3986
+    python3 -m pip install spython
+    python3 -m pip install twine
+    python3 -m pip install Cython    
+
+
+    ################################################################################
+    ## PS1
+    ################################################################################
+    CUSTOM_PS1_FILE=/.singularity.d/env/99-zz-02_custom_ps1.sh
+    cat << "    EOH" | awk '{$1=$1;print}' > $CUSTOM_PS1_FILE
+    #!/bin/bash"
+
+    PS1="(S)\W \$ "
+
+    ## EOF
+    EOH
+
+    chmod 755 $CUSTOM_PS1_FILE
+
+
+
+%files
+
+
+%test
+
+
+%help
+    EEG Dementia Classification Project
+
+
+%labels
+    Author ywata1989@gmail.com
+    Version 0.0.3
+
+
+%environment
+    ## Meta data
+    export CONTAINER_BUILD_DATE=\"`date`\"
+    export SINGULARITY_DEF_FNAME=\"`basename "$0"`\"
+
+%startscript
+
+
+%runscript

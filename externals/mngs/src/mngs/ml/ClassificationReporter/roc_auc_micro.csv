@@ -1,0 +1,8 @@
+,roc_auc_micro
+5-folds_CV_mean,1.0
+5-fold_CV_std,0.0
+fold#0,1.0
+fold#1,1.0
+fold#2,0.999
+fold#3,1.0
+fold#4,1.0

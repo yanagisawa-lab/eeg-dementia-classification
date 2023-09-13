@@ -1,0 +1,8 @@
+,pre_rec_auc_macro
+5-folds_CV_mean,0.998
+5-fold_CV_std,0.001
+fold#0,0.999
+fold#1,0.999
+fold#2,0.997
+fold#3,0.998
+fold#4,0.997

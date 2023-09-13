@@ -1,0 +1,8 @@
+,manu_scalars
+5-folds_CV_mean,0.643
+5-fold_CV_std,0.306
+fold#0,0.527
+fold#1,0.863
+fold#2,0.669
+fold#3,0.19
+fold#4,0.968

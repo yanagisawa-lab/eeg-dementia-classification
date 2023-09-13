@@ -1,0 +1,8 @@
+,mcc
+5-folds_CV_mean,0.98
+5-fold_CV_std,0.005
+fold#0,0.975
+fold#1,0.978
+fold#2,0.988
+fold#3,0.981
+fold#4,0.978

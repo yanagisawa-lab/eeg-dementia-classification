@@ -1,0 +1,8 @@
+,balanced_acc
+5-folds_CV_mean,0.982
+5-fold_CV_std,0.004
+fold#0,0.978
+fold#1,0.981
+fold#2,0.989
+fold#3,0.983
+fold#4,0.981

@@ -1,0 +1,22 @@
+## Model
+n_fc1:
+    1024
+
+d_ratio1:
+    .85
+
+n_fc2:
+    256
+
+d_ratio2:
+    .85
+
+window_size_pts:
+    1000
+    
+lr:
+    4e-4
+
+n_gpus:
+    1
+    

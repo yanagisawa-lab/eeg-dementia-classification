@@ -1,0 +1,20 @@
+random_state:
+  42
+
+batch_size:
+  512
+
+max_n_EEGs_per_sub:
+  100
+
+is_debug_mode:
+  False
+
+is_random_init:
+  False
+
+transform:
+  False
+
+num_workers:
+  24

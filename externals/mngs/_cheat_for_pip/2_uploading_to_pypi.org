@@ -1,0 +1,14 @@
+* Test uploading
+#+begin_src bash
+pip install twine
+twine upload -r testpypi dist/*
+# check 1
+google-chrome https://test.pypi.org/project/<PACKAGENAME>/
+# check 2
+python3 -m venv ~/venv/test
+soruce ~/venv/test/bin/activate
+pip install --upgrade pip
+pip install -i https://test.pypi.org/simple/ <PACKAGENAME>
+# # or
+# pip --no-cache-dir install --upgrade --index-url https://test.pypi.org/simple/ <PACKAGENAME>
+#+end_src

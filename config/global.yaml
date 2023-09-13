@@ -1,0 +1,42 @@
+BANDS_LIM_HZ_DICT:
+  delta: [.5, 4]
+  theta: [ 4, 8]
+  lalpha: [8, 10]
+  halpha: [10, 13]
+  beta: [13, 32]
+  gamma: [32, 75]
+   
+DIAGS_COLORS_DICT:
+    'HV': 'gray'
+    'AD': 'red'    
+    'DLB': 'green'    
+    'NPH': 'blue'
+    
+RANDOM_STATE:
+    42
+    
+SAMP_RATE:
+    500
+    
+LABELS_ALL:
+    ['HV', 'AD', 'DLB', 'NPH']
+
+DIAGNOSIS_COMPARISONS_ALL:
+    ['HV AD DLB NPH',
+     'HV AD',
+     'HV DLB',
+     'HV NPH',
+     'HV AD+DLB+NPH',
+     'AD DLB',
+     'AD DLB NPH',
+     'PET-P PET-N',]
+
+BIDS_Osaka_NAME:
+  BIDS_dataset_Osk_v5.3
+
+BIDS_Kochi_NAME:
+  BIDS_dataset_v1.1_Kochi
+  
+BIDS_Nissei_NAME:
+  BIDS_dataset_Nissei_v1.1
+     

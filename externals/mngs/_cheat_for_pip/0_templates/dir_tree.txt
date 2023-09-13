@@ -1,0 +1,16 @@
+.
+├── CHANGELOG.md
+├── LICENSE
+├── MANIFEST.in
+├── README.md
+├── README.rst
+├── <package>
+│   ├── __init__.py
+│   └── <module>.py
+├── requirements.txt
+├── setup.cfg
+├── setup.py
+├── test
+│   ├── __init__.py
+│   └── test_foo.py
+└── test-requirements.txt

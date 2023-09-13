@@ -1,0 +1,16 @@
+chardet
+GitPython
+h5py
+joblib
+matplotlib
+natsort
+numpy
+pandas
+pymatreader
+PyYAML
+scipy
+seaborn
+sklearn
+statsmodels
+torch
+xmltodict
