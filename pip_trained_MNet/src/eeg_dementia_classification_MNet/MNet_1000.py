@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Time-stamp: "2023-09-12 14:53:19 (ywatanabe)"
+# Time-stamp: "2023-10-18 13:35:45 (ywatanabe)"
 
 import torch
 import torch.nn as nn
@@ -32,11 +32,11 @@ if __name__ == "__main__":
     DISEASE_TYPES = ["HV", "AD", "DLB", "NPH"]
     
     # Model
-    model = MNet_1000(DISEASE_TYPES, is_ensemble=True)
+    model = MNet_1000(DISEASE_TYPES, is_ensemble=True).cuda()
 
     # Demo data
     bs, n_chs, seq_len = 16, 19, 1000
-    x = torch.rand(bs, n_chs, seq_len)
+    x = torch.rand(bs, n_chs, seq_len).cuda()
 
     # Load pretrained weights
     model.load_weights()

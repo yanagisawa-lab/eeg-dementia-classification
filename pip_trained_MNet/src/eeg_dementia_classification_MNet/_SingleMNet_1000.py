@@ -130,10 +130,10 @@ class SwapLayer(nn.Module):
 if __name__ == "__main__":
     ## Demo data
     bs, n_chs, seq_len = 16, 19, 1000
-    x = torch.rand(bs, n_chs, seq_len)
+    x = torch.rand(bs, n_chs, seq_len).cuda()
 
     disease_types = ["HV", "AD", "DLB", "NPH"]
-    model = SingleMNet_1000(disease_types)
+    model = SingleMNet_1000(disease_types).cuda()
 
     y_diag = model(x)
     # summary(model, x)

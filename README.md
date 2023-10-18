@@ -41,11 +41,11 @@ import torch
 DISEASE_TYPES = ["HV", "AD", "DLB", "NPH"]
 
 ## MNet
-model = MNet_1000(DISEASE_TYPES, is_ensemble=True)
+model = MNet_1000(DISEASE_TYPES, is_ensemble=True).cuda()
 model.load_weights(i_fold=0) # the pretrained_weights directory should be located at the current working directory
 
 ## Feeds data
 bs, n_chs, seq_len = 16, 19, 1000
-x = torch.rand(bs, n_chs, seq_len)
+x = torch.rand(bs, n_chs, seq_len).cuda()
 y = model(x)
 ```
