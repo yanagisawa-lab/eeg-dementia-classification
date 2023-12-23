@@ -12,9 +12,9 @@ Pretrained weights are available on [our Google Drive](https://drive.google.com/
 ``` bash
 $ tar xvf pretrained_weights.tar.gz
 ```
-3. Overwrite the './data/pretrained_weights' directory with the extracted directory. As an illustration, the weight files (.pth) should be organized as follows:
+3. Overwrite the './pretrained_weights' directory with the extracted directory. As an illustration, the weight files (.pth) should be organized as follows:
 ```
-./eeg_dementia_classification/data/pretrained_weights/
+./eeg_dementia_classification/pretrained_weights/
 ├── AD_vs_DLB
 │   ├── model_fold#0_epoch#045.pth
 │   ├── model_fold#1_epoch#031.pth
