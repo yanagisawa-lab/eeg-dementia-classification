@@ -1,9 +1,16 @@
-## EEG_dementia_classification
-This repository contains the source code used in the study titled "[A Deep Learning Model for Detection of Dementia Diseases and Identification of Underlying Pathologies of Mild Cognitive Impairment Based on Resting-State Electroencephalography: A Retrospective, Multicenter Study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4304749)"
+## EEG dementia classification
+Watanabe, Y., Miyazaki, Y., Hata, M., Fukuma, R., Aoki, Y., Kazui, H., Araki, T., Taomoto, D., Satake, Y., Suehiro, T., Sato, S., Kanemoto, H., Yoshiyama, K., Ishii, R., Harada, T., Kishima, H., Ikeda, M., & Yanagisawa, T. (2024). **A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study**. *Neural Networks*, 171, 242–250. https://doi.org/10.1016/j.neunet.2023.12.009
 
+## Installation
+#### Source code
 ``` bash
 git clone git@github.com:yanagisawa-lab/eeg-dementia-classification.git
 ```
+#### Trained model
+``` bash
+pip install eeg_dementia_classification_MNet
+```
+
 
 ## Pretrained Weights
 Pretrained weights are available on [our Google Drive](https://drive.google.com/file/d/1QZYlEtcd4Szf5K55cNrSxalHcW6UjkaF/view?usp=sharing).
@@ -27,12 +34,7 @@ $ tar xvf pretrained_weights.tar.gz
 ...
 ```
 
-## Trained model installation
-``` bash
-pip install eeg_dementia_classification_MNet
-```
-
-## Usage
+## Usage of the Trained Models
 ``` python
 from eeg_dementia_classification_MNet import MNet_1000
 import torch
@@ -48,4 +50,19 @@ model.load_weights(i_fold=0) # the pretrained_weights directory should be locate
 bs, n_chs, seq_len = 16, 19, 1000
 x = torch.rand(bs, n_chs, seq_len).cuda()
 y = model(x)
+```
+
+## Cite
+``` bibtex
+@article{WATANABE2024242,
+  title={A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study},
+  author={Watanabe, Yusuke and Miyazaki, Yuki and Hata, Masahiro and others},
+  journal={Neural Networks},
+  volume={171},
+  pages={242-250},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.neunet.2023.12.009},
+  url={https://www.sciencedirect.com/science/article/pii/S0893608023007037}
+}
 ```
