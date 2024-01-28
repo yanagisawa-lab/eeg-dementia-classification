@@ -55,14 +55,13 @@ y = model(x)
 ## BibTeX Citation
 ``` bibtex
 @article{WATANABE2024242,
-  title={A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study},
-  author={Watanabe, Yusuke and Miyazaki, Yuki and Hata, Masahiro and others},
-  journal={Neural Networks},
-  volume={171},
-  pages={242-250},
-  year={2024},
-  publisher={Elsevier},
-  doi={10.1016/j.neunet.2023.12.009},
-  url={https://www.sciencedirect.com/science/article/pii/S0893608023007037}
-}
+title = {A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study},
+journal = {Neural Networks},
+volume = {171},
+pages = {242-250},
+year = {2024},
+issn = {0893-6080},
+doi = {https://doi.org/10.1016/j.neunet.2023.12.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0893608023007037},
+author = {Yusuke Watanabe and Yuki Miyazaki and Masahiro Hata and Ryohei Fukuma and Yasunori Aoki and Hiroaki Kazui and Toshihiko Araki and Daiki Taomoto and Yuto Satake and Takashi Suehiro and Shunsuke Sato and Hideki Kanemoto and Kenji Yoshiyama and Ryouhei Ishii and Tatsuya Harada and Haruhiko Kishima and Manabu Ikeda and Takufumi Yanagisawa},
 ```
