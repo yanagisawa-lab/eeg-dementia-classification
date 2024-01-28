@@ -52,7 +52,7 @@ x = torch.rand(bs, n_chs, seq_len).cuda()
 y = model(x)
 ```
 
-## Cite
+## BibTeX Citation
 ``` bibtex
 @article{WATANABE2024242,
   title={A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study},
