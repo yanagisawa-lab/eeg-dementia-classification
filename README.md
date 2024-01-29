@@ -4,11 +4,11 @@ Watanabe, Y., Miyazaki, Y., Hata, M., Fukuma, R., Aoki, Y., Kazui, H., Araki, T.
 ## Installation
 #### Source code
 ``` bash
-git clone git@github.com:yanagisawa-lab/eeg-dementia-classification.git
+$ git clone git@github.com:yanagisawa-lab/eeg-dementia-classification.git
 ```
 #### Trained model
 ``` bash
-pip install eeg_dementia_classification_MNet
+$ pip install eeg_dementia_classification_MNet
 ```
 
 
