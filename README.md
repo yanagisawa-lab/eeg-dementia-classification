@@ -1,11 +1,18 @@
 ![CI](https://github.com/yanagisawa-lab/eeg-dementia-classification/actions/workflows/MNet_1000_forward.yml/badge.svg)
 
-## EEG_dementia_classification
-This repository contains the source code used in the study titled "[A Deep Learning Model for Detection of Dementia Diseases and Identification of Underlying Pathologies of Mild Cognitive Impairment Based on Resting-State Electroencephalography: A Retrospective, Multicenter Study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4304749)"
+## EEG dementia classification
+Watanabe, Y., Miyazaki, Y., Hata, M., Fukuma, R., Aoki, Y., Kazui, H., Araki, T., Taomoto, D., Satake, Y., Suehiro, T., Sato, S., Kanemoto, H., Yoshiyama, K., Ishii, R., Harada, T., Kishima, H., Ikeda, M., & Yanagisawa, T. (2024). **A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study**. *Neural Networks*, 171, 242–250. https://doi.org/10.1016/j.neunet.2023.12.009
 
+## Installation
+#### Source code
 ``` bash
-git clone git@github.com:yanagisawa-lab/eeg-dementia-classification.git
+$ git clone git@github.com:yanagisawa-lab/eeg-dementia-classification.git
 ```
+#### Trained model
+``` bash
+$ pip install eeg_dementia_classification_MNet
+```
+
 
 ## Pretrained Weights
 Pretrained weights are available on [our Google Drive](https://drive.google.com/file/d/1QZYlEtcd4Szf5K55cNrSxalHcW6UjkaF/view?usp=sharing).
@@ -14,9 +21,9 @@ Pretrained weights are available on [our Google Drive](https://drive.google.com/
 ``` bash
 $ tar xvf pretrained_weights.tar.gz
 ```
-3. Overwrite the './data/pretrained_weights' directory with the extracted directory. As an illustration, the weight files (.pth) should be organized as follows:
+3. Overwrite the './pretrained_weights' directory with the extracted directory. As an illustration, the weight files (.pth) should be organized as follows:
 ```
-./eeg_dementia_classification/data/pretrained_weights/
+./eeg_dementia_classification/pretrained_weights/
 ├── AD_vs_DLB
 │   ├── model_fold#0_epoch#045.pth
 │   ├── model_fold#1_epoch#031.pth
@@ -29,12 +36,7 @@ $ tar xvf pretrained_weights.tar.gz
 ...
 ```
 
-## Trained model installation
-``` bash
-pip install eeg_dementia_classification_MNet
-```
-
-## Usage
+## Usage of the Trained Models
 ``` python
 from eeg_dementia_classification_MNet import MNet_1000
 import torch
@@ -50,4 +52,18 @@ model.load_weights(i_fold=0) # the pretrained_weights directory should be locate
 bs, n_chs, seq_len = 16, 19, 1000
 x = torch.rand(bs, n_chs, seq_len).cuda()
 y = model(x)
+```
+
+## BibTeX Citation
+``` bibtex
+@article{WATANABE2024242,
+title = {A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study},
+journal = {Neural Networks},
+volume = {171},
+pages = {242-250},
+year = {2024},
+issn = {0893-6080},
+doi = {https://doi.org/10.1016/j.neunet.2023.12.009},
+url = {https://www.sciencedirect.com/science/article/pii/S0893608023007037},
+author = {Yusuke Watanabe and Yuki Miyazaki and Masahiro Hata and Ryohei Fukuma and Yasunori Aoki and Hiroaki Kazui and Toshihiko Araki and Daiki Taomoto and Yuto Satake and Takashi Suehiro and Shunsuke Sato and Hideki Kanemoto and Kenji Yoshiyama and Ryouhei Ishii and Tatsuya Harada and Haruhiko Kishima and Manabu Ikeda and Takufumi Yanagisawa},
 ```

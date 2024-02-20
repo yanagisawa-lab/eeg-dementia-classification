@@ -16,5 +16,4 @@ jobs:
         run: |
           python --version
           python -m pip install eeg_dementia_classification_MNet
-          python -m pip install -r ./pip_trained_MNet/requirements.txt
           python ./examples/MNet_1000_forward.py
