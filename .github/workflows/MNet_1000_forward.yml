@@ -10,10 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Install and run eeg_dementia_classfication_MNet
+      - name: Install and run eeg_dementia_classification_MNet
         run: |
           python --version
           python -m pip install eeg_dementia_classification_MNet
-          python ./examples/MNet_1000_forward.py      
+          python ./examples/MNet_1000.py
