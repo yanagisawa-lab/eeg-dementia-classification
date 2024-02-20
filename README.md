@@ -1,3 +1,5 @@
+![CI](https://github.com/yanagisawa-lab/eeg-dementia-classification/actions/workflows/MNet_1000_forward.yml/badge.svg)
+
 ## EEG_dementia_classification
 This repository contains the source code used in the study titled "[A Deep Learning Model for Detection of Dementia Diseases and Identification of Underlying Pathologies of Mild Cognitive Impairment Based on Resting-State Electroencephalography: A Retrospective, Multicenter Study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4304749)"
 
