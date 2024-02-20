@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from torchsummary import summary
 from eeg_dementia_classification_MNet.utils import connect_strs
 from glob import glob
+import os
 
 
 class SingleMNet_1000(nn.Module):
@@ -60,6 +61,8 @@ class SingleMNet_1000(nn.Module):
             nn.Linear(n_fc2, len(disease_types)),
         )
 
+        self.are_weights_loaded = True        
+
     @staticmethod
     def _reshape_input(x, n_chs):
         """
@@ -77,25 +80,31 @@ class SingleMNet_1000(nn.Module):
         return (x - x.mean(dim=-1, keepdims=True)) / x.std(dim=-1, keepdims=True)
 
     def load_weights(self, i_fold=0):
-        weights_dir = (
-            f"./pretrained_weights/{connect_strs(self.disease_types, filler='_vs_')}/"
-        )
-        weights_list = glob(weights_dir + f"model_fold#{i_fold}_epoch#*.pth")
-        if not weights_list:  # This checks if the list is empty
-            error_message = (
-                "Pretrained weights are not found.\n"
-                "1. Download them from our Google Drive (https://drive.google.com/file/d/1QZYlEtcd4Szf5K55cNrSxalHcW6UjkaF/view)\n"
-                "2. Extract the pretrained_weights.tar.gz with 'tar xvf pretrained_weights.tar.gz'\n"
-                "3. Locate the pretrained_weights directory in the current working directory."
-            )
-            raise ValueError(error_message)
-        weights_path = weights_list[0]
-        weights = torch.load(weights_path)
-        # Remove keys related to fc_subj
-        weights = {k: v for k, v in weights.items() if not k.startswith("fc_subj")}
-        self.load_state_dict(weights, strict=False)
-        print(f"\nPretrained weights have been loaded from {weights_path}.\n")
-        return self
+        try:
+            weights_dir = os.path.join(".", "pretrained_weights", connect_strs(self.disease_types, filler='_vs_'))
+            weights_list = glob(os.path.join(weights_dir, f"model_fold#{i_fold}_epoch#*.pth"))
+            if not weights_list:  # This checks if the list is empty
+                error_message = (
+                    "Pretrained weights are not found.\n"
+                    "1. Download them from our Google Drive (https://drive.google.com/file/d/1QZYlEtcd4Szf5K55cNrSxalHcW6UjkaF/view)\n"
+                    "2. Extract the pretrained_weights.tar.gz with 'tar xvf pretrained_weights.tar.gz'\n"
+                    "3. Locate the pretrained_weights directory in the current working directory."
+                )
+                raise ValueError(error_message)
+            weights_path = weights_list[0]
+            weights = torch.load(weights_path, map_location=self._get_device())
+            # Remove keys related to fc_subj
+            weights = {k: v for k, v in weights.items() if not k.startswith("fc_subj")}
+            self.load_state_dict(weights, strict=False)
+            # print(f"\nPretrained weights have been loaded from {weights_path}.\n")
+            self.are_weights_loaded = True
+            return self            
+        except Exception as e:
+            print(e)
+
+
+    def _get_device(self):
+        return next(self.parameters()).device    
 
     def forward(self, x):
         x = self._normalize_time(x)  # time-wise normalization
@@ -128,12 +137,15 @@ class SwapLayer(nn.Module):
 
 
 if __name__ == "__main__":
+    # Parameters
+    device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
+    
     ## Demo data
     bs, n_chs, seq_len = 16, 19, 1000
-    x = torch.rand(bs, n_chs, seq_len).cuda()
+    x = torch.rand(bs, n_chs, seq_len).to(device)
 
     disease_types = ["HV", "AD", "DLB", "NPH"]
-    model = SingleMNet_1000(disease_types).cuda()
+    model = SingleMNet_1000(disease_types).to(device)
 
     y_diag = model(x)
     # summary(model, x)

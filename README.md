@@ -1,3 +1,5 @@
+![CI](https://github.com/yanagisawa-lab/eeg-dementia-classification/actions/workflows/MNet_1000_forward.yml/badge.svg)
+
 ## EEG dementia classification
 Watanabe, Y., Miyazaki, Y., Hata, M., Fukuma, R., Aoki, Y., Kazui, H., Araki, T., Taomoto, D., Satake, Y., Suehiro, T., Sato, S., Kanemoto, H., Yoshiyama, K., Ishii, R., Harada, T., Kishima, H., Ikeda, M., & Yanagisawa, T. (2024). **A deep learning model for the detection of various dementia and MCI pathologies based on resting-state electroencephalography data: A retrospective multicentre study**. *Neural Networks*, 171, 242–250. https://doi.org/10.1016/j.neunet.2023.12.009
 
